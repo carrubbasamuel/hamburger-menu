@@ -66,21 +66,11 @@ div.hamb-menu.open::after {
 /* Suggerimento 2: Le animazioni, una volta avviate sul browser, potrebbero non svilupparsi nuovamente all'applicazione di una classe! */
 
 /* Animations Area: */
+div.hamb-menu.close, div.hamb-menu.close::before, div.hamb-menu.close::after{
+    animation-direction: reverse;
+}
 
 
-div.hamb-menu.close {
-    animation: close-mid 0.4s ease-in-out;
-    animation-fill-mode: forwards;
-    box-shadow: none;
-}
-div.hamb-menu.close::before {
-    animation: close-up 0.4s ease-in-out;
-    animation-fill-mode: forwards;
-}
-div.hamb-menu.close::after {
-    animation: close-down 0.4s ease-in-out;
-    animation-fill-mode: forwards;
-}
 
 
 @keyframes open-up {
@@ -102,18 +92,5 @@ div.hamb-menu.close::after {
 
 /* Animazione di chiusura */
 
-@keyframes close-up {
-    0% { transform: rotate(45deg); }
-    50% { transform: translateY(0); }
-    100% { transform: translateY(-15px); }
-}
-@keyframes close-down {
-    0% { transform: rotate(-45deg); }
-    50% { transform: translateY(0); }
-    100% { transform: translateY(15px); }
-}
-@keyframes close-mid {
-    0% { background-color: transparent; }
-    100% { background-color: white; }
-}
+
 
